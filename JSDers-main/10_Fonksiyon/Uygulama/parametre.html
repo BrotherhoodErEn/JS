@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametreli Fonksiyon</title>
+    <style>
+        body {
+            background-color: gold;
+            font-size: 22pt;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <input id="kelime1" type="text">
+    <br>
+    <input id="kelime2" type="text">
+    <br>
+    <button onclick="Al()">Kısaltma Yap</button>
+    <p id="kelime"></p>
+    <script>
+        function Birlestir(x, y) {
+            return x.substring(0, 1).toUpperCase() + y.substring(0, 1).toUpperCase(); 
+        }
+        var k1 = "";
+        var k2 = "";
+        function Al() {
+            k1 = document.getElementById("kelime1").value;
+            k2 = document.getElementById("kelime2").value;
+            document.getElementById("kelime").innerHTML = Birlestir(k1, k2);
+        }
+    </script>
+
+</body>
+</html>

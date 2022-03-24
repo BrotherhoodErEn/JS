@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 1:</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Kullanıcının Girdiği Değerleri
+        //sayılar adında bir diziye kaydediniz.
+        //Kullanıcı e girdiğinde giriş işlemi sonlansın
+        //dizi çıktıları h etiketleri içinde en büyük şekilde görünsün
+        //Boş dizi
+        var sayilar = []
+        var giris = prompt("Bir Sayı Girinizi");
+        while (giris != 'e') {
+            giris = prompt("Bir Sayı Girinizi");
+            if (giris != 'e')
+                sayilar.push(Number(giris));
+        }
+
+        for(let i = 0; i< sayilar.length;i++) {
+            document.write(sayilar[i]);
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

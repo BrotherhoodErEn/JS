@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 5</title>
+</head>
+<body>
+    <!-- Bir A ürününün fiyatı 5 lira ve kdv oranı 8% dir.
+    Kullanıcının X tane aldığı A ürününün toplam
+    maliyeti için şu şekilde indirim uygulancaktır;
+    1- X ürün sayısı >= 50 ise; 20%
+    2- X ürün sayısı >= 20 ise; 10%
+    3- X ürün sayısı >= 10 ise; 5%;
+    4- X ürünü 10 dan az ise indirim yok.
+    girilen ürün sayısına göre toplam maliyeti gösteren programı yazınız. -->
+    
+    <p id="fiyat"></p>
+    <script type="text/javascript">
+        var maliyet = 5;
+        var urunAdedi = Number(prompt("Kaç Adet Ürün Aldınız: "));
+        var fiyat = 0;
+        if(urunAdedi >= 20 && urunAdedi < 50) {
+            fiyat = ((urunAdedi * maliyet ) * 1.08) * 0.9;
+        }
+        else if (urunAdedi >= 10 && urunAdedi < 20) {
+            fiyat = ((urunAdedi * maliyet ) * 1.08) * 0.95;
+        }
+        else if (urunAdedi < 10) {
+            fiyat = ((urunAdedi * maliyet ) * 1.08);
+        }
+        else {
+            fiyat = ((urunAdedi * maliyet ) * 1.08) * 0.8;
+        }
+document.getElementById("fiyat").innerHTML = "Birim fiyatı: " + maliyet + " lira olan " +  urunAdedi +
+ " tane ürünün fiyatı: " + fiyat;
+    </script>
+</body>
+</html>

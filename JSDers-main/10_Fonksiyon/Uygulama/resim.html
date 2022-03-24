@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resim</title>
+    <style>
+        img {
+            width: 150px;
+            height: 270px;;
+        }
+    </style>
+</head>
+<body>
+    <img id="rsm" src="gs.png"><br>
+
+    <button onclick="Degistir()">Değiştir</button>
+    <script type="text/javascript">
+            var kontrol = true;
+            var ikontrol = false;
+            function Degistir() {  
+                var element = document.getElementById("rsm");
+                if(kontrol && !ikontrol) {
+                    element.src = "fb.png"
+                    ikontrol = true;
+                    kontrol = false;
+                }
+                else
+                {
+                    element.src = "gs.png"
+                    ikontrol = false;
+                    kontrol = true;
+                }
+            }
+    </script>
+</body>
+
+</html>

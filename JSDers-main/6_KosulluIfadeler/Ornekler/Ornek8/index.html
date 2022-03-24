@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 8</title>
+</head>
+
+<body>
+    <!-- Üç basamaklı rastgele oluşturulmuş bir sayıyı tersten yazınız.
+    örn: 567 -> 765
+    sayının karakökünü alarak tam sayıya çeviriniz
+    oluşan sayı çift ise
+    ilk sayıdan, oluşan sayıyı çıkartarak ekrana yazdırınız
+    değilse ilk sayı ile oluşan sayıyı toplayarak ekrana yazdırınız
+
+    Math.sqrt(sayi) -> kök alma
+    % -> mod alma
+    / -> bölme
+
+    Math.round(sayi) -> sayıyı yuvarlama -->
+    <p id="tutulan_sayi"></p>
+    <p id="ters_sayi"></p>
+    <p id="karekok"></p>
+    <p id="sonuc"></p>
+    <script type="text/javascript">
+        var sayi = Math.round(Math.random() * 1000);//
+        var sayi_cpy = sayi;
+        document.getElementById("tutulan_sayi").innerHTML ="Üretilen Sayı: " + sayi_cpy;
+        //Math.random() //0.152652215 * 1000 - Math.round()
+        // console.log(sayi);
+        birler_basamagi = sayi % 10;//5
+        // console.log(birler_basamagi);
+        sayi = (sayi - birler_basamagi) / 10;//23
+        // console.log(sayi);
+        onlar_basamagi = sayi % 10;//3
+        // console.log(onlar_basamagi);
+        yuzler_basamagi = (sayi - onlar_basamagi) / 10;//2
+        // console.log(yuzler_basamagi);
+        ters_sayi = birler_basamagi * 100 + onlar_basamagi * 10 + yuzler_basamagi;
+// console.log(ters_sayi);//532
+        document.getElementById("ters_sayi").innerHTML = "Tersi: " +  ters_sayi;
+        var r = Math.round(Math.sqrt(ters_sayi));
+        document.getElementById("karekok").innerHTML = "Karekökünün Yuvarlanmış Hali: " + r;
+        if (r % 2 == 0) {
+            let sonuc = sayi_cpy - r;
+            document.getElementById("sonuc").innerHTML = "Karekök Sonucu Çift -> " + 
+            sayi_cpy + "-" + r  + " = " + sonuc;
+
+        }
+        else {
+            let sonuc = sayi_cpy + r;
+            document.getElementById("sonuc").innerHTML = "Karekök Sonucu Tek ->" + 
+            sayi_cpy + "+" + r  + " = " + + sonuc;
+        }
+    </script>
+</body>
+
+</html>

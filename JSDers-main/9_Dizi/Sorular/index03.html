@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 3:</title>
+</head>
+
+<body>
+    <p id="baslangic"></p>
+    <p id="indirimli"></p>
+    <p id="oran"></p>
+    <p id="goster"></p>
+    <input type="text" id="ara" width="200" placeholder="kod">
+    <button id="ara" onclick="Arama()">Ara</button>
+    <p id="aranan"></p>
+    <script type="text/javascript">
+        //Aşağıda bir firmanın bilet ve taşıma ücretleri verilmitşir
+        //10 lira ve 10 liranın üstünde olan biletlere %10 indirim uygulandığı takdirde
+        //toplam gelirdeki değişimi gösteren javascipt kodunu yazınız.
+        //var dizi = [[1,2,3],[3,4,5]];
+        //dizi[0] -> [1,2,3]
+        //dizi[1] -> [3,4,5]
+        //dizi[1][0] -> 3
+        //biletFiyatları[0][1] -> ["A-X123",12]
+        var biletFiyatlari = 
+        [
+        ["A-X123",12],
+        ["B-Y321",13],
+        ["C-YU23",10],
+        ["D-OPP4",9],
+        ["E-OEP4",14],
+        ["F-UPW2", 10],
+        ["G-YHD2",10],
+        ["A-X123",12],
+        ["B-Y321",13],
+        ["C-YU23",10],
+        ["D-OPP4",9],
+        ["E-OEP4",14],
+        ["F-UPW2", 10],
+        ["G-YHD2",10],
+        ["A-X123",12],
+        ["B-Y321",13],
+        ["C-YU23",10],
+        ["D-OPP4",9],
+        ["E-OEP4",14],
+        ["F-UPW2", 8],
+        ["G-YHD2",17],
+        ["A-X123",11],
+        ["B-Y321",9],
+        ["C-YU23",10],
+        ["D-OPP4",9],
+        ["E-OEP4",14],
+        ["F-UPW2", 10],
+        ["G-YHD2",10]
+    ];
+    var baslangicFiyatToplami = 0;
+    var baslangicFiyatToplamiIndrm = 0;
+    //document.getElementById("goster").innerHTML = biletFiyatlari[1][0];
+    for(let i = 0;i<biletFiyatlari.length;i++) {
+        baslangicFiyatToplami += biletFiyatlari[i][1];
+    }
+
+    for(let k = 0;k<biletFiyatlari.length;k++) {
+        if(biletFiyatlari[k][1] >= 10) {
+            baslangicFiyatToplamiIndrm += (biletFiyatlari[k][1] * 0.9);
+        }
+        else {
+            baslangicFiyatToplamiIndrm += biletFiyatlari[k][1];
+        }
+    }
+    document.getElementById("baslangic").innerHTML ="Başlangıç Toplam: " + baslangicFiyatToplami;
+    document.getElementById("indirimli").innerHTML = "İndirimli Toplam: " + baslangicFiyatToplamiIndrm;
+    document.getElementById("oran").innerHTML = "İndirim Oranı: " + baslangicFiyatToplami/baslangicFiyatToplamiIndrm;
+
+    function Arama() {
+        var bilet = document.getElementById("ara").value;
+        for(let i = 0;i<biletFiyatlari.length;i++) {
+           if( biletFiyatlari[i][0] == bilet ){
+            document.getElementById("aranan").innerHTML = biletFiyatlari[i][1];
+            }
+        }
+
+    }
+
+    </script>
+</body>
+</html>

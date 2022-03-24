@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 6</title>
+</head>
+<body>
+    <!-- Bir geometrik şeklin alanı hesaplanmak isteniyor
+    Buna göre;
+    Kullanıcıya sorulan bir şekil seçiniz sorusunun cevabı
+    1 ise dairenin alanı
+    2 ise karenin alanı
+    3 ise dik üçgenin alanı hesaplanacaktır
+    Ayrıca 
+    her bir şekil için gerekli olan değişken değerleri
+    kullanıcı tarafından girilmek zorundandır. -->
+    <table>
+        <tr>
+            <td><p id="alan"></p></td>
+            <td>cm<sup>2</sup></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        var secenek = prompt("Daire-1, Kare-2, Dik Üçgen-3");
+        const PI = 3.14;
+        var alan = 0;
+        var secim = "";
+        if (secenek == '1') {
+            //daire alanı
+            var yariCap = Number(prompt("Yaricap Giriniz: "));
+            alan = PI * (yariCap ** 2);
+            secim = "Daire";
+        }
+        else if (secenek == '2') {
+            //kare alanı
+            var kenar = Number(prompt("Kenar Giriniz: "));
+            alan = kenar * kenar;
+            secim = "Kare";
+        }
+        else if (secenek == '3') {
+            //Dik üçgen alanı
+            var yukseklik = Number(prompt("Yükseklik Giriniz: "));
+            var taban = Number(prompt("Taban Giriniz: "));
+            alan = (yukseklik * taban) / 2;
+            secim = "Dik Üçgen";
+        }
+        else {  
+            alert("Yanlış Giriş");
+        }
+        document.getElementById("alan").innerHTML = secim + "'nin alanı " + alan + "";
+    </script>
+</body>
+</html>

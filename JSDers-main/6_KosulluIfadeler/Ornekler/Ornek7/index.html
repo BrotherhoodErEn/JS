@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // iki basamaklı rastgele bir sayı oluşturarak
+        //bu sayının 3'e veya 4'e bölünüp bölnmediğini gösteriniz.
+        var s = Math.random();
+        document.write(s);
+        s *= 100;
+        document.write("<br>");
+        s = Math.round(s);
+        document.write(s);
+        document.write("<br>");
+        if ((s % 3) == 0 || (s % 4) == 0) {
+            if ((s % 3) == 0) {
+                document.write("Sayı 3'e bölünebilir");
+            }
+            else if ((s % 4) == 0) {
+                document.write("Sayı 4'e bölünebilir");
+            }
+            else {
+                document.write("Sayı 3'e ve 4'e bölünebilir");
+            }
+        }
+        else {
+            document.write("Bölünemez!!!");
+        }
+    </script>
+</body>
+</html>

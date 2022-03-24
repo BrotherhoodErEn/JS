@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #sonuc {
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <p id="sonuc"></p>
+
+    <!-- Bir öğrenciye ait 2 vize ve bir final notu giriliyor
+    final notunun %60' vize notlarının ortalamasının % 40'ı alınarak
+    ortalama not hesaplanıyor
+    ortalama not 50 den küçükse öğrenci bütünleme sınavına giriliyor
+    bütünleme sınavından 50'nin üstünde alırsa
+    sınıftan geçiyor
+    alamazsa sınıfta kalıyor
+    Programı yazınız. -->
+    <script type="text/javascript">
+        var v1 = Number(prompt("Vize 1: "));
+        var v2 = Number(prompt("Vize 2: "));        
+        var f = Number(prompt("Final: "));
+        var vize_ortalama = (v1 + v2) / 2;
+        var genel_ortalama = f * 0.6 + vize_ortalama * 0.4;
+        alert("Ortalama: (" + vize_ortalama + " + " + f + ") / 2 =" + genel_ortalama);
+        if (genel_ortalama < 50) {
+            var butunleme = Number(prompt("Bütünleme Sınavı: "));
+            if (butunleme >= 50) {
+                document.getElementById("sonuc").innerHTML = "Öğrenci Geçti" + " Not: " + butunleme;
+                document.getElementById("sonuc").style.color = "green";
+
+            }
+            else{
+                document.getElementById("sonuc").innerHTML = "Öğrenci Kaldı" + " Not: " + butunleme;
+                document.getElementById("sonuc").style.color = "red";
+            }
+        }
+        else {
+            document.getElementById("sonuc").innerHTML = "Öğrenci Geçti" + "Not: " + genel_ortalama;
+            document.getElementById("sonuc").style.color = "green";
+        }
+    </script>
+</body>
+</html>

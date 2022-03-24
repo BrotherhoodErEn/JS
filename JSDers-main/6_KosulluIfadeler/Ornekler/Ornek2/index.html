@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru 2</title>
+</head>
+<body>
+    Kullanıcı tarafında girilen iki sayıyı (s1, s2) 
+    karşılaştıran programı yazınız.
+    s1 > s2 = 5 > 3 şeklinde çıkış versin
+    <p  id="sonuc"></p>
+    <script type="text/javascript">
+    var s1 = prompt("Bir sayı giriniz: ");
+    var s2 = prompt("Bir sayı giriniz: ");
+    if(s1 > s2) {
+        document.getElementById("sonuc").innerHTML = "s1 > s2 ->" + s1 + ">" + s2
+
+    }
+    else if (s2 > s1) {
+        document.getElementById("sonuc").innerHTML = "s2 > s1 ->" + s2 + ">" + s1;
+    }
+    else {
+        document.getElementById("sonuc").innerHTML = "s1 == s2 ->" + s1 + "==" + s2;
+    }
+    </script>
+</body>
+</html>

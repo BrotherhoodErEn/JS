@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM</title>
+    <style>
+        body {
+            background-color: gainsboro;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            display:inline;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="sayi1" placeholder="1.Sayı">
+<br>
+<input type="text" id="sayi2" placeholder="1.Sayı">
+<br>
+<button onclick="Topla()">+<sup></sup></button>
+<button onclick="Cikar()">-<sup></sup></button>
+<button onclick="Carp()">x<sup></sup></button>
+<button onclick="Bol()" >/<sup></sup></button>
+<button onclick="Ust()" >x<sup>2</sup></button>
+<button onclick="Kok()" >&radic;x<sup></sup></button>
+<button onclick="Kalan()" >%<sup></sup></button>
+<p id="sonuc"></p>
+    <script type="text/javascript">
+            //iki tane text içinden alınan sayılara 
+            //toplama, çarpma, bölme, çıkarma, kalan, üst alma, kök alma
+            //7 tane button
+            //7 fonksiyon
+            function Topla() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let toplam = sayi1 + sayi2;
+                document.getElementById("sonuc").innerHTML = toplam;
+            }
+            function Cikar() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let cikar = sayi1 - sayi2;
+                document.getElementById("sonuc").innerHTML = cikar;
+            }
+            function Carp() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let carp = sayi1 * sayi2;
+                document.getElementById("sonuc").innerHTML = carp;
+            }
+            function Bol() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let bol = sayi1 / sayi2;
+                document.getElementById("sonuc").innerHTML = bol;
+            }
+            function Ust() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let ust = Math.pow(sayi1, sayi2);
+                document.getElementById("sonuc").innerHTML = ust;
+            }
+            function Kok() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let kok = Math.pow(sayi1, (1/sayi2));
+                document.getElementById("sonuc").innerHTML = kok;
+            }
+            function Kalan() {
+                var sayi1 = Number(document.getElementById("sayi1").value);
+                var sayi2 = Number(document.getElementById("sayi2").value);
+                let kalan = sayi1 % sayi2;
+                document.getElementById("sonuc").innerHTML = kalan;
+            }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            font-size: 22pt;
+        }
+    </style>
+</head>
+
+<body onload="Yukle()">
+    <select id="arabalar" onclick="Yaz()">
+
+    </select>
+    <p id="secilen"></p>
+    <!-- <button onclick="Yukle()">Yukle</button> -->
+    <script type="text/javascript">
+        function Yukle() {
+            var liste = ["Ford", "Renault", "Mercedes"];
+            var select = document.getElementById("arabalar");
+            for (var i = 0; i < liste.length; i++) {
+                var option = liste[i];
+                var el = document.createElement("option");
+                el.textContent = option;
+                el.value = option;
+                select.appendChild(el);
+            }
+        }
+        function Yaz() {
+            var select = document.getElementById("arabalar");
+            var text = select.options[e.selectedIndex].text;
+            document.getElementById("secilen").innerHTML = text;
+
+        }
+    </script>
+</body>
+
+</html>

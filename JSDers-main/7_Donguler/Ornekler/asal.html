@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal</title>
+</head>
+
+<body>
+    <p id="sonuc"></p>
+    <script type="text/javascript">
+        //var sayi = prompt("Asal Kontrolü");
+        for (let k = 100; k <= 1000; k++) {
+            var kontrol = false;
+            for (let i = 2; i < k; i++) {
+                if (k % i == 0) {
+                    kontrol = true;
+                    break;
+                }
+            }
+            if (kontrol) {
+                document.write("<p id=" + 'sonuc' + String(k) +"></p>"); //id ="sonuc100"
+                document.getElementById("sonuc" + k).innerHTML = k + " asal değildir";
+                document.getElementById("sonuc" + k).style.color ="red";
+                // document.getElementById("sonuc").innerHTML = k + " asal değildir;"
+                // document.getElementById("sonuc").style.color ="red";
+
+            }
+            else {
+                document.write("<p id=" + "sonuc" + k +"></p>");
+                document.getElementById("sonuc" + k).innerHTML = k + " asaldır";
+                document.getElementById("sonuc" + k).style.color ="green";
+                // document.getElementById("sonuc").innerHTML = k + " asaldır;"
+                // document.getElementById("sonuc").style.color ="red";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

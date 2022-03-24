@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematiksel Operatörler</title>
+</head>
+<body>
+    <p id="toplama"></p>
+    <b id="ustalma"></b><sup id="ust"></sup>
+    <p>I will display </p>
+    <script type="text/javascript">
+        var s1 = 15; //= atama işleci
+        var s2 = 5;
+       
+        let toplama = s1 + s2;
+        let cikarma = s1 - s2;
+        let bolme = s1 / s2;
+        let carpma = s1 * s2;
+        let ustalma1 = s1 ** s2;
+        let ustalma2 = Math.pow(s1, s2);
+        let kok = Math.sqrt(s1);
+        let kalan = s1 % s2;
+        document.getElementById("toplama").innerHTML = s1 + "+" + s2 + "=" + toplama;
+        document.getElementById("ustalma").innerHTML = s1;
+        document.getElementById("ust").innerHTML = s2;
+
+
+    </script>
+</body>
+</html>
