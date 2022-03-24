@@ -1,4 +1,4 @@
 # JS
 JS ABOUT
 Javascript derleri :)
-by Eray
+by Eray&Engin
